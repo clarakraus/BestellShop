@@ -1,14 +1,15 @@
 package ShopAufgabe;
 
+import java.util.List;
 import java.util.UUID;
 
 public class Order {
 
     private String orderId;
-    private Product product;
+    private List<Product> products;
 
-    public Order(Product product) {
-        this.product = product;
+    public Order(List<Product> products) {
+        this.products = products;
         this.orderId = UUID.randomUUID().toString();
     }
 
@@ -16,7 +17,7 @@ public class Order {
         return orderId;
     }
 
-    public Product getProduct() {
-        return product;
+    public List<Product> getProducts() {
+        return products;
     }
 }
